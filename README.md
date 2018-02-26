@@ -1,13 +1,13 @@
-**Ansible role management:**
+# Ansible role management
 
-**Introduction:**
+## Introduction
 
 The main purpose of this documentation is to introduce best practices to
 be followed for Ansible role management. This document should walk you
 through the basics of writing reusable roles with dependencies backed by
 public and private git repositories.
 
-**Why do we need role management?:**
+## Why do we need role management?
 
 Ansible role are meant to be reusable. However it becomes difficult if
 we do not manage our roles centrally and have an individual copy for
@@ -19,7 +19,7 @@ copies. This is why we need a system wherein we can get the specific
 version of a role from a central repository so that we can manage it in
 easier way.
 
-**Ansible Galaxy and Role Management:**
+## Ansible Galaxy and Role Management
 
 Ansible Galaxy can refer to one of  two things:
 
@@ -36,7 +36,7 @@ version control system. This way we need not have to keep our roles in
 Ansible Galaxy, thus giving security feature to the roles which are
 sensitive for the organization.
 
-**How to manage roles using Ansible Galaxy:**
+## How to manage roles using Ansible Galaxy
 
 We can use following steps to manage ansible roles using Ansible Galaxy:
 
@@ -47,7 +47,7 @@ is YAML, and the file extension must be either *.yml* or *.yaml*.
 Use the following command to install roles included
 in *requirements.yml*:
 
-$ ansible-galaxy install -r requirements.yml
+    $ ansible-galaxy install -r requirements.yml
 
 Again, the extension is important. If the *.yml* extension is left off,
 the ansible-galaxy CLI assumes the file is in an older, now deprecated,
@@ -62,7 +62,7 @@ Note: In order to use roles from git, we have to ensure that git is
 installed on our ansible server from where we are executing the
 playbook.
 
-**Downloading Ansible roles through requirements.yml:**
+## Downloading Ansible roles through requirements.yml
 
 Following steps are to be followed in order to download ansible roles.
 
@@ -79,7 +79,7 @@ roles.
 Step 4: Now you can run your playbook so that all the required roles are
 in place.
 
-**How to automate above process?:**
+## How to automate the process?
 
 Above process is a manual process in which you have to execute the
 ansible-galaxy command manually before running playbook. How about if we
